@@ -59,7 +59,6 @@ export default function App({ Home }) {
               <Stack.Screen name="mystery" component={CommitmentFlow} />
               <Stack.Screen name="Main" component={MainScreen} />
               <Stack.Screen name="CareFullyTracking" component={CareFullyTracking} />
-              <Stack.Screen name="StatementFlow" component={StatementFlow} />
             </Stack.Navigator>
           </NavigationContainer>
           <Toast />

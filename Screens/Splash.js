@@ -10,23 +10,24 @@ export function Splash({navigation}){
     const dispatch = useDispatch();
 
     useEffect(() => {
-        const checkToken = async () => {
-          try {
-            // Check if the token is stored in AsyncStorage
-            const token = await AsyncStorage.getItem('token');
-            dispatch(setToken(token));
-            if (token !== null && token !== undefined) {
-                dispatch(getAuthDetails(token))
-                navigation.navigate("Main")
-            } else {
-                navigation.navigate("Home");
-            }
-          } catch (error) {
-            console.error('Error checking token:', error);
-          }
-        };
-    
-        checkToken();
+    //     const checkToken = async () => {
+    //       try {
+    //         // Check if the token is stored in AsyncStorage
+    //         const token = await AsyncStorage.getItem('token');
+    //         dispatch(setToken(token));
+    //         if (token !== null && token !== undefined) {
+    //             dispatch(getAuthDetails(token))
+    //             navigation.navigate("Main")
+    //         } else {
+    //         }
+    //     } catch (error) {
+    //         console.error('Error checking token:', error);
+    //     }
+    // };
+    setTimeout(() => {
+        navigation.navigate("Home");
+    }, 500);
+        // checkToken();
       }, [dispatch, navigation]);
 
     
